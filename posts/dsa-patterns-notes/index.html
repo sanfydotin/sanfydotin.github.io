@@ -49,7 +49,7 @@
 <meta property="og:description" content="Maths for coding Sieve of Eratosthenes - to find the Prime Numbers Find GCD gcd(a,b) = gcd(a-b,b) if a&gt;b gcd(a,b) = gcd(b,a%b) def gcd(a,b): 1 2 3 4 if b==0: return b return gcd(b, a%b) public static int gcd(int a, int b) { if(b == 0) { return a; } 1 return gcd(b, a%b); } Fast Power 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 int res = 1; while( b &gt; 0) { if((b &amp; 1) != 0) { res = res * a; } a = a * a; b = b &gt;&gt; 1; } return res; Catalan Numbers Program to write Catalan Numbers dp[0] = 1 dp[1] = 1 for i in range(2,n): for j in range(i): dp[i] += dp[j]*dp[i-j-1] Variations: Number of Binary Search Trees. Count of Valleys and Mountains Count of Brackets Dyk Words Maze path above diagonal Circle and Chords Number of ways of Triangulation Minimum score of Triangulation 0-1 Knapsack def knapsack(wt: List[int], val: List[int], int W, int n)-&gt;int: if n == 0 or W == 0: return 0 1 2 3 4 5 if wt[n-1] &lt;= W: return max(val[n-1] + knapsack(wt,val, W - wt[n-1],n-1), knapsack(wt,val, W, n-1)) else: return knapsack(wt,val, W, n-1) Subset Sum Equal Sum Partition Count of Subset Sum Minimum Subset sum difference Target Sum Number of subset with given difference Unbounded Knapsack def knapsack(wt: List[int], val: List[int], int W, int n)-&gt;int: if n == 0 or W == 0: return 0 1 2 3 4 5 if wt[n-1] &lt;= W: return max(val[n-1] + knapsack(wt,val, W - wt[n-1],n), knapsack(wt,val, W, n-1)) else: return knapsack(wt,val, W, n-1) Rod cutting Coin Change Coin Change 2 Maximum Ribbon Cut Fibonacci def fibo(n: int)-&gt; int: dp[0] = 0 dp[1] = 0 1 2 3 4 for i in range(2,n+1): dp[i] = dp[i-1] + dp[i-2] return dp[n] Fibonacci number Climb Stair Climb Stairs With Variable Jump Climb Stairs with Minimum Moves Minimum cost in Maze Path Goldmine LCS - Longest Common Subsequence def lcs(x: str, y: str, n: int, m: int)-&gt;int: if n == 0 or m == 0: return 0 1 2 3 4 5 if x[n] == y[m]: return 1 + lcs(x, y, n-1, m-1) else: return max(lcs(x, y, n-1, m), lcs(x, y, n, m-1)) Longest Common Subsequence Largest Common Substring Print LCS Shortest common Superseuence Print SCS Minimum number of insertion or deletion to convert string a to b Length of largest subsequence of a which is a substring in b Subsequence pattern matching Count how many times a appears as subsequence in b Largest Palindromic Subsequence Largest Palindromic Substring Count of Palindromic Substring Minimum number of deletions in a string to make it a Palindrome Minimum number of insertions in a string to make it a Palindrome Largest Repeating Subsequence LIS LIS Print all LIS Maxumum sum increasing subsequence Longest Bitonic Subsequence Maximum Non-Overlapping Bridges Russian Doll Envelopes Perfect Squares Highway Billboard problem Kadanes’s Algorithm Maximum Sum Subarray Maximum consecutive 1 Matrix Chain Multiplication def solve(arr: str/List, i: int, j: int)-&gt;int: if i &gt; j: return 0 1 2 3 4 5 6 for k in range(i,j): temp = solve(arr, i,k) + solve(arr, k+1,j) ans = cal(temp, ans) return ans MCM Printing MCM Evaluate Expression to true / Boolean Parenthesisations Min/ Max value of an Expression Palindromic Partitioning Scramble String Egg Dropping Problem DP on Trees def solve(root: Node)-&gt; int: if root is None: return 0 1 2 3 4 5 6 7 8 9 10 l = solve(root.left) r = solve(root.right) temp = calc(l,r) ans = max/min(temp, ans) res = max/min(res,ans) return res Diameter of a Binary tree Maximum Path sum from any node to any Maximum Path sum from Leaf to leaf Diameter of N-array Tree DP on Grid Count Pattern def solve(n): dp1 = [ 0 for i in range(n+1)] dp2 = [ 0 for i in range(n+1)] 1 2 3 4 5 6 7 8 9 dp1[1] = 1 dp2[1] = 1 for i in range(2, n+1): dp2[i] = dp2[i-1] + dp1[i-1] dp1[i] = dp2[i-1] return dp1[n] + dp2[n] Count Binary String Arrange Building Decode Ways Count Subsequencees of form ABC* Subsequences Maximum Sum Non Adjacent Elements Paint House 3 color Paint House many color Paint Fences Tiling with Dominos Tiling with M*1 Tiles Friends pairing f(n) = f(n-1) + (n-1)f(n-2) Partition into Subsets f(n,k) = k*f(n-1,k) + f(n-1,k-1) Buy Sell Shares Best Time to Buy and Sell Stocks - one transaction lsf = IntMax op = 0 pist = 0 for p in range(len(prices)): if prices[p] &lt; lsf: lsf = pist 1 2 pist = prices[p] - lsf op = max(op, pist) Best Time to Buy and Sell Stocks - infinite transaction bp = 0 sp = 0 ans = 0 for p in range(1, len(prices)): if prices[p] &lt; sp: ans += prices[sp] - prices[bp] 1 2 3 4 bp = p sp = p else: sp += 1 Best Time to Buy and Sell Stocks - with transaction fees bsp = prices[0] ssp = 0 for p in range(1, len(prices)): tempbsp = min((prices[p] - ssp), bsp) ssp = max((prices[p] - bsp - f), ssp) bsp = tempbsp Best Time to Buy and Sell Stocks - infinite transaction with cool down bsp = prices[0] ssp = 0 csp = 0 for p in range(1, len(prices)): nbsp = min((prices[p] - csp), bsp) nssp = max((prices[p] - bsp), ssp) ncsp = max(ssp , csp) 1 2 3 bsp = nbsp sso = nssp csp = ncsp Best Time to Buy and Sell Stocks - two transaction Best Time to Buy and Sell Stocks - k transaction Others Largest Square Sub Matrix for i in range(n-1, -1,-1): for j in range(m-1, -1, -1): if i == n-1 or j == m-1 or M[i][j] == 0: A[i][j] = M[i][j] continue 1 A[i][j] = 1 + min(A[i][j-1], A[i-1][j], A[i-1][j-1])) Greedy Algorithm Local optimal solution N meetings in one room Maximum meetings in one room Shop in Candy store Check if it is possible to survive on Island Reverse words in a given string Chocolate Distribution Problem Minimum cost of ropes Huffman Coding Fractional Knapsack Job Sequencing Problem Maximum performance of a team - LC1383 Sliding Windows Maximum Sum Subarray of size K First Negative Number in every Window of Size K Count Unique Characters of All Substrings of a Given String - contribution of a Character = leftWindowCount * rightWindowCount 1 2 3 4 5 - Create dict&lt;char, List&lt;int&gt;&gt; to hold index of each character - ABCAACD - len(str) = 6 - A -&gt; -1,0,3,4,7 - left = I[i] - I(i-1) - right = I[i+1] - I[i] Maximum Sum Circular Subarray find max_sum, min_sum, total_sum if total sum = min_sum, return max sum else return max(max_sum, total_sum - min_sum) Stack Remove K digits Build lowest number remove first peak Use stack, remove if the top of stack is greater than the current element and keep decrementing k if stack is empty and current element is 0, skip to next element. If k = 0, insert rest of the element in the stack. remove element from stack and create the string T O(N), S O(N) Graph class Edge: def init(self): self.src self.nbr self.wt Bit Manipulation 0 MSB - covert as it is 1 MSB - 2’s complement 4bit signed - -8 to 7 4bit unsigned - 0 to 16 decimal to binary +ve - fit in bits -ve - Covert to binary without sign - Fit in bits - 2’s complement on - or off - and toggle - xor check - and Binary Search Allocate Minimum Number Of Pages nums = [10, 20, 30, 40] if m &gt; len(nums): return -1 start = Max(nums) end = Sum(nums) res = -1 while start &lt;= end: mid = start + (end - start)/2 1 2 3 4 5 if isValid(nums,mid,m) == true: res = mid end = mid - 1 else: start = mid + 1 def isValid(nums, max, m): tempM = 1 sum = 0 1 2 3 4 5 6 7 8 9 10 11 for n in nums: sum += n if sum &gt; max: tempM++ if(tempM &gt; m): return false sum = n return true" />
 <link rel="canonical" href="/posts/dsa-patterns-notes/" />
 <meta property="og:url" content="/posts/dsa-patterns-notes/" />
-<meta property="og:site_name" content="SanfyIn" />
+<meta property="og:site_name" content="Sanfy.In" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-09-17T22:04:00+05:30" />
 <meta name="twitter:card" content="summary" />
@@ -62,7 +62,7 @@
 
   
 
-  <title>DSA Patterns | SanfyIn
+  <title>DSA Patterns | Sanfy.In
   </title>
 
   <!--
@@ -77,8 +77,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
 <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
 <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="SanfyIn">
-<meta name="application-name" content="SanfyIn">
+<meta name="apple-mobile-web-app-title" content="Sanfy.In">
+<meta name="application-name" content="Sanfy.In">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
@@ -283,7 +283,7 @@
     </div>
 
     <div class="site-title mt-3">
-      <a href="/">SanfyIn</a>
+      <a href="/">Sanfy.In</a>
     </div>
     <div class="site-subtitle font-italic">Learning Software Engineering</div>
 
@@ -1616,19 +1616,19 @@ return true
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=DSA+Patterns+-+SanfyIn&url=%2Fposts%2Fdsa-patterns-notes%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=DSA+Patterns+-+Sanfy.In&url=%2Fposts%2Fdsa-patterns-notes%2F" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=DSA+Patterns+-+SanfyIn&u=%2Fposts%2Fdsa-patterns-notes%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=DSA+Patterns+-+Sanfy.In&u=%2Fposts%2Fdsa-patterns-notes%2F" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=%2Fposts%2Fdsa-patterns-notes%2F&text=DSA+Patterns+-+SanfyIn" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=%2Fposts%2Fdsa-patterns-notes%2F&text=DSA+Patterns+-+Sanfy.In" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>

@@ -6,11 +6,11 @@ git commit -m %arg1%
 
 git push
 
-docker-compose up
+docker-compose -f docker-compose-win.yml up
 
-xcopy /S /I /E /Y .\_site\ ..\sanfyin.github.io
+xcopy /S /I /E /Y .\_site\ ..\sanfydotin.github.io
 
-cd ..\sanfyin.github.io
+cd ..\sanfydotin.github.io
 
 git add .
 

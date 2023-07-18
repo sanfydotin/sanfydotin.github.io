@@ -47,8 +47,8 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="Sliding Window pattern in DSA questions 1. Maximum Sum Subarray of Size K (easy) Questions Details Given an array of positive numbers and a positive number ‘k’, find the maximum sum of any contiguous subarray of size ‘k’. &lt;/br&gt; Example 1: &lt;/br&gt; Input: [2, 1, 5, 1, 3, 2], k=3 &lt;/br&gt; Output: 9 Explanation: Subarray with maximum sum is [5, 1, 3]. * Example 2: Input: [2, 3, 4, 1, 5], k=2 Output: 7 Explanation: Subarray with maximum sum is [3, 4]. Implementation Python js ruby 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 def max_sub_array_of_size_k(k, arr): max_sum , window_sum = 0, 0 window_start = 0 for window_end in range(len(arr)): window_sum += arr[window_end] # add the next element # slide the window, we don&#39;t need to slide if we&#39;ve not hit the required window size of &#39;k&#39; if window_end &gt;= k-1: max_sum = max(max_sum, window_sum) window_sum -= arr[window_start] # subtract the element going out window_start += 1 # slide the window ahead return max_sum def main(): print(&quot;Maximum sum of a subarray of size K: &quot; + str(max_sub_array_of_size_k(3, [2, 1, 5, 1, 3, 2]))) print(&quot;Maximum sum of a subarray of size K: &quot; + str(max_sub_array_of_size_k(2, [2, 3, 4, 1, 5]))) main() 1 console.log(&#39;hello&#39;); 1 pputs &#39;hello&#39; A collapsible section with markdown Click to expand! ## Heading 1. A numbered 2. list * With some * Sub bullets Assert: Type(iterator) is Object. Assert: completion is a Completion Record. Let hasReturn be HasProperty(iterator, &quot;return&quot;). ReturnIfAbrupt(hasReturn). If hasReturn is true, then Let innerResult be Invoke(iterator, &quot;return&quot;, ( )). If completion.[[type]] is not throw and innerResult.[[type]] is throw, then Return innerResult. Return completion." />
 <meta property="og:description" content="Sliding Window pattern in DSA questions 1. Maximum Sum Subarray of Size K (easy) Questions Details Given an array of positive numbers and a positive number ‘k’, find the maximum sum of any contiguous subarray of size ‘k’. &lt;/br&gt; Example 1: &lt;/br&gt; Input: [2, 1, 5, 1, 3, 2], k=3 &lt;/br&gt; Output: 9 Explanation: Subarray with maximum sum is [5, 1, 3]. * Example 2: Input: [2, 3, 4, 1, 5], k=2 Output: 7 Explanation: Subarray with maximum sum is [3, 4]. Implementation Python js ruby 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 def max_sub_array_of_size_k(k, arr): max_sum , window_sum = 0, 0 window_start = 0 for window_end in range(len(arr)): window_sum += arr[window_end] # add the next element # slide the window, we don&#39;t need to slide if we&#39;ve not hit the required window size of &#39;k&#39; if window_end &gt;= k-1: max_sum = max(max_sum, window_sum) window_sum -= arr[window_start] # subtract the element going out window_start += 1 # slide the window ahead return max_sum def main(): print(&quot;Maximum sum of a subarray of size K: &quot; + str(max_sub_array_of_size_k(3, [2, 1, 5, 1, 3, 2]))) print(&quot;Maximum sum of a subarray of size K: &quot; + str(max_sub_array_of_size_k(2, [2, 3, 4, 1, 5]))) main() 1 console.log(&#39;hello&#39;); 1 pputs &#39;hello&#39; A collapsible section with markdown Click to expand! ## Heading 1. A numbered 2. list * With some * Sub bullets Assert: Type(iterator) is Object. Assert: completion is a Completion Record. Let hasReturn be HasProperty(iterator, &quot;return&quot;). ReturnIfAbrupt(hasReturn). If hasReturn is true, then Let innerResult be Invoke(iterator, &quot;return&quot;, ( )). If completion.[[type]] is not throw and innerResult.[[type]] is throw, then Return innerResult. Return completion." />
-<link rel="canonical" href="http://0.0.0.0:4000/posts/sliding-window/" />
-<meta property="og:url" content="http://0.0.0.0:4000/posts/sliding-window/" />
+<link rel="canonical" href="/posts/sliding-window/" />
+<meta property="og:url" content="/posts/sliding-window/" />
 <meta property="og:site_name" content="SanfyIn" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-05-31T22:04:00+05:30" />
@@ -57,7 +57,7 @@
 <meta name="twitter:site" content="@sanfyin" />
 <meta name="twitter:creator" content="@Sanfyin" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sanfyin"},"dateModified":"2022-05-31T22:04:00+05:30","datePublished":"2022-05-31T22:04:00+05:30","description":"Sliding Window pattern in DSA questions 1. Maximum Sum Subarray of Size K (easy) Questions Details Given an array of positive numbers and a positive number ‘k’, find the maximum sum of any contiguous subarray of size ‘k’. &lt;/br&gt; Example 1: &lt;/br&gt; Input: [2, 1, 5, 1, 3, 2], k=3 &lt;/br&gt; Output: 9 Explanation: Subarray with maximum sum is [5, 1, 3]. * Example 2: Input: [2, 3, 4, 1, 5], k=2 Output: 7 Explanation: Subarray with maximum sum is [3, 4]. Implementation Python js ruby 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 def max_sub_array_of_size_k(k, arr): max_sum , window_sum = 0, 0 window_start = 0 for window_end in range(len(arr)): window_sum += arr[window_end] # add the next element # slide the window, we don&#39;t need to slide if we&#39;ve not hit the required window size of &#39;k&#39; if window_end &gt;= k-1: max_sum = max(max_sum, window_sum) window_sum -= arr[window_start] # subtract the element going out window_start += 1 # slide the window ahead return max_sum def main(): print(&quot;Maximum sum of a subarray of size K: &quot; + str(max_sub_array_of_size_k(3, [2, 1, 5, 1, 3, 2]))) print(&quot;Maximum sum of a subarray of size K: &quot; + str(max_sub_array_of_size_k(2, [2, 3, 4, 1, 5]))) main() 1 console.log(&#39;hello&#39;); 1 pputs &#39;hello&#39; A collapsible section with markdown Click to expand! ## Heading 1. A numbered 2. list * With some * Sub bullets Assert: Type(iterator) is Object. Assert: completion is a Completion Record. Let hasReturn be HasProperty(iterator, &quot;return&quot;). ReturnIfAbrupt(hasReturn). If hasReturn is true, then Let innerResult be Invoke(iterator, &quot;return&quot;, ( )). If completion.[[type]] is not throw and innerResult.[[type]] is throw, then Return innerResult. Return completion.","headline":"Sliding Window Patterns","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/posts/sliding-window/"},"url":"http://0.0.0.0:4000/posts/sliding-window/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sanfyin"},"dateModified":"2022-05-31T22:04:00+05:30","datePublished":"2022-05-31T22:04:00+05:30","description":"Sliding Window pattern in DSA questions 1. Maximum Sum Subarray of Size K (easy) Questions Details Given an array of positive numbers and a positive number ‘k’, find the maximum sum of any contiguous subarray of size ‘k’. &lt;/br&gt; Example 1: &lt;/br&gt; Input: [2, 1, 5, 1, 3, 2], k=3 &lt;/br&gt; Output: 9 Explanation: Subarray with maximum sum is [5, 1, 3]. * Example 2: Input: [2, 3, 4, 1, 5], k=2 Output: 7 Explanation: Subarray with maximum sum is [3, 4]. Implementation Python js ruby 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 def max_sub_array_of_size_k(k, arr): max_sum , window_sum = 0, 0 window_start = 0 for window_end in range(len(arr)): window_sum += arr[window_end] # add the next element # slide the window, we don&#39;t need to slide if we&#39;ve not hit the required window size of &#39;k&#39; if window_end &gt;= k-1: max_sum = max(max_sum, window_sum) window_sum -= arr[window_start] # subtract the element going out window_start += 1 # slide the window ahead return max_sum def main(): print(&quot;Maximum sum of a subarray of size K: &quot; + str(max_sub_array_of_size_k(3, [2, 1, 5, 1, 3, 2]))) print(&quot;Maximum sum of a subarray of size K: &quot; + str(max_sub_array_of_size_k(2, [2, 3, 4, 1, 5]))) main() 1 console.log(&#39;hello&#39;); 1 pputs &#39;hello&#39; A collapsible section with markdown Click to expand! ## Heading 1. A numbered 2. list * With some * Sub bullets Assert: Type(iterator) is Object. Assert: completion is a Completion Record. Let hasReturn be HasProperty(iterator, &quot;return&quot;). ReturnIfAbrupt(hasReturn). If hasReturn is true, then Let innerResult be Invoke(iterator, &quot;return&quot;, ( )). If completion.[[type]] is not throw and innerResult.[[type]] is throw, then Return innerResult. Return completion.","headline":"Sliding Window Patterns","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/sliding-window/"},"url":"/posts/sliding-window/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -719,7 +719,7 @@ Explanation: Subarray with maximum sum is [3, 4].
 <details>
   <summary>Implementation</summary>
 
-<ul class="tab" data-tab="753e1bcc-1355-42ab-a6ec-23c4d960b5af" data-name="log">
+<ul class="tab" data-tab="0014cb35-5eaa-4d67-b902-9fafdf13f762" data-name="log">
   
       <li class="active">
           <a href="#">Python </a>
@@ -734,7 +734,7 @@ Explanation: Subarray with maximum sum is [3, 4].
       </li>
   
 </ul>
-<ul class="tab-content" id="753e1bcc-1355-42ab-a6ec-23c4d960b5af" data-name="log">
+<ul class="tab-content" id="0014cb35-5eaa-4d67-b902-9fafdf13f762" data-name="log">
   
       <li class="active">
 <div class="language-python highlighter-rouge"><div class="code-header">
@@ -899,19 +899,19 @@ Explanation: Subarray with maximum sum is [3, 4].
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=Sliding+Window+Patterns+-+SanfyIn&url=http%3A%2F%2F0.0.0.0%3A4000%2Fposts%2Fsliding-window%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Sliding+Window+Patterns+-+SanfyIn&url=%2Fposts%2Fsliding-window%2F" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Sliding+Window+Patterns+-+SanfyIn&u=http%3A%2F%2F0.0.0.0%3A4000%2Fposts%2Fsliding-window%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Sliding+Window+Patterns+-+SanfyIn&u=%2Fposts%2Fsliding-window%2F" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=http%3A%2F%2F0.0.0.0%3A4000%2Fposts%2Fsliding-window%2F&text=Sliding+Window+Patterns+-+SanfyIn" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=%2Fposts%2Fsliding-window%2F&text=Sliding+Window+Patterns+-+SanfyIn" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>

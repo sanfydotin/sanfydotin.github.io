@@ -4,7 +4,7 @@
   <id>/</id>
   <title>SanfyIn</title>
   <subtitle>A blogging site for sharing the experience of building software</subtitle>
-  <updated>2023-07-18T23:25:35+05:30</updated>
+  <updated>2024-10-23T23:04:28+05:30</updated>
   <author>
     <name>Sanfy.In</name>
     <uri>/</uri>
@@ -13,7 +13,7 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="/"/>
   <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator>
-  <rights> © 2023 Sanfy.In </rights>
+  <rights> © 2024 Sanfy.In </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
